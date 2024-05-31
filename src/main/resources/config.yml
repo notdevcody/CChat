@@ -1,0 +1,31 @@
+# CChat - Advanced chat moderation for Project Poseidon
+#
+# Formatting messages:
+#   %s - one string
+#   %.2f - rounded numbers (2nd decimal place)
+#   %placeholder% - when multiple strings are accepte
+#
+# Blacklist entries:
+#   Entries prefixed with "\" will mean an exact word match.
+#   Entries prefixed with "\l\" will mean an exact word match, without checks for leet speech.
+#   Entries prefixed with "regex-" will indicate a regex.
+cooldown:
+  enable: true
+  commands: true
+  length: 1500
+  message: '&cYou''re typing too fast! %.2f seconds remaining.'
+
+blacklist:
+  enable: true
+  commands: true
+  block: ['retard']
+  block-message: '&cYou shouldn''t say that! Offending word: %s.'
+  mute: ['fag']
+  mute-time: '10m'
+  mute-reason: 'Usage of blacklisted words'
+  mute-message: '&cYou were muted for &e%time%&c. Offending word: %s.'
+  # %reason% placeholder also available for plugins that support it.
+  mute-command: 'mute %player% %time%'
+  ban: ['nigger']
+  ban-reason: '&cYou''ve been banned for using prohibited wording.'
+  ban-command: 'ban %player% %reason%'

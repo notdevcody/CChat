@@ -1,0 +1,24 @@
+name: CChat
+version: 1.0
+author: devcody
+main: me.devcody.cchat.CChat
+
+commands:
+  cchat:
+    description: Manage the CChat plugin.
+    usage: /cchat <reload>
+  cooldown:
+    aliases: ccd
+    description: Manage chat cooldown.
+    usage: /cooldown <on | off | time>
+    permission: cchat.cooldown.manage
+
+permissions:
+  cchat.command.reload:
+    description: 'Allows for reloading the plugin''s configuration.'
+  cchat.blacklist.bypass:
+    description: Bypasses the blacklist.
+  cchat.cooldown.bypass:
+    description: Bypasses the chat cooldown.
+  cchat.cooldown.manage:
+    description: Allows for using the cooldown command.
