@@ -23,7 +23,7 @@ jobs:
         with:
           arguments: build
       - run: echo "NOW=$(date +'%d%m%Y-%H%M%S')" >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: cchat.${{ env.NOW }}
           path: build/libs
